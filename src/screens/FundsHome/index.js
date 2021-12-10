@@ -11,14 +11,15 @@ import homeData from '../../data/home';
 import FundItem from '../../components/FundItem';
 import useBlockChain from '../../hooks/useBlockChain';
 const FundsHome = ({navigation}) => {
-  const eth = useBlockChain();
+  const {getAccounts, createAccount, getBalace} = useBlockChain();
 
   const handleSearchClick = () => {
-    navigation.navigate('Search');
+    createAccount();
   };
 
   const handleNavigate = () => {
-    navigation.navigate('FundDetail');
+    // navigation.navigate('FundDetail');
+    getBalace();
   };
 
   const searchAction = () => (
