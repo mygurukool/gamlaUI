@@ -4,12 +4,15 @@ import IconButton from '../../components/common/IconButton';
 import ScreenContainer from '../../components/common/ScreenContainer';
 import Typography from '../../components/common/Typography';
 import FundCarousel from '../../components/FundCarousel';
-import HorizontalList from '../../components/HorizontalList.';
+import HorizontalList from '../../components/HorizontalList';
 import {hp} from '../../constants';
 import theme from '../../constants/theme';
 import homeData from '../../data/home';
 import FundItem from '../../components/FundItem';
+import useBlockChain from '../../hooks/useBlockChain';
 const FundsHome = ({navigation}) => {
+  const eth = useBlockChain();
+
   const handleSearchClick = () => {
     navigation.navigate('Search');
   };

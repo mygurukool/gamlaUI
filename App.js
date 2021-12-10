@@ -8,7 +8,7 @@ import {
 } from 'react-native-orientation-locker';
 import Store from './src/redux/store';
 import {Provider as ReduxProvider} from 'react-redux';
-
+import './shim';
 const App = () => {
   return (
     <ReduxProvider store={Store()}>
